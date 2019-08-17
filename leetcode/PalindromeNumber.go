@@ -20,7 +20,7 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 */
 
 /**
-121 第一位和最后一位121/100和121%10 在比较2
+1221 先比较首位和末位，末位直接x%10,首位需要先知道除以多少个10,比较完首位和末位获取中间的数字重复以上操作
 */
 func isPalindrome(x int) bool {
 	if x < 0 {

@@ -23,7 +23,7 @@ A solution set is:
 ]
 */
 // 失败超时
-func ThreeSum(nums []int) [][]int {
+func threeSum(nums []int) [][]int {
 	rs := make([][]int, 0)
 	strMap := make(map[string]int, 0)
 	for i := 0; i < len(nums); i++ {
@@ -70,7 +70,7 @@ func ThreeSum(nums []int) [][]int {
 使得指向的数字增大一些。同理，如果两数之和大于 target，则将右边那个指针j左移一位，
 使得指向的数字减小一些，
 */
-func ThreeSum1(nums []int) [][]int {
+func threeSum1(nums []int) [][]int {
 	rs := make([][]int, 0)
 	for i := 0; i < len(nums); i++ {
 		for j := i + 1; j < len(nums); j++ {

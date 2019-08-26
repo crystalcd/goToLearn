@@ -28,6 +28,6 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func removeNthFromEnd(head *ListNode, n int) *ListNode {
-
-}
+//func removeNthFromEnd(head *ListNode, n int) *ListNode {
+//
+//}

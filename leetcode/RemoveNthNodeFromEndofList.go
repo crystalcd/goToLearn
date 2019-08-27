@@ -28,6 +28,11 @@ type ListNode struct {
 	Next *ListNode
 }
 
+/**
+采用map存储链表并且在循环过程中统计链表长度，用链表长度减去n则得到链表从0开始的第几个节点需要删除，
+如果节点索引为0则删除map中key为0的节点返回key为1的节点，
+如果索引小于0则返回key为0的节点，如果索引大于0则先删除索引在返回key为0的节点
+*/
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	nodeMap := make(map[int]*ListNode)
 	i := 0

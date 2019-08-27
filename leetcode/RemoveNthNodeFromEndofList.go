@@ -28,6 +28,20 @@ type ListNode struct {
 	Next *ListNode
 }
 
-//func removeNthFromEnd(head *ListNode, n int) *ListNode {
-//
-//}
+func removeNthFromEnd(head *ListNode, n int) *ListNode {
+	nodeMap := make(map[int]*ListNode)
+	i := 0
+	for head != nil {
+		nodeMap[i] = head
+		head = head.Next
+		i++
+	}
+	actN := i - n
+	if actN == 0 {
+		return nodeMap[1]
+	} else if actN < 0 {
+		return nodeMap[0]
+	}
+	nodeMap[actN-1].Next = nodeMap[actN+1]
+	return nodeMap[0]
+}
